@@ -6,6 +6,21 @@ html
         include _header.pug
         .ts.stackable.grid
             include _nav.pug
-            .twelve.wide.column 4
+            .twelve.wide.column
+                +header('開始使用','從這裡開始吧')
+                +header('引用','下載並解壓縮後，保持資料夾結構，丟到你的網頁目錄，即可開始使用！')
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <!-- Chat UI-->
+                        <link href="/path/to/css/ChatUI.css" rel="stylesheet">
+                        ```
+                +header('外部引用','不放在自家伺服器的方法')
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <!-- Chat UI-->
+                        <link href="https://earlyspringcommitee.github.io/ChatUI/css/ChatUI.css" rel="stylesheet">
+                        ```
         
         include _footer.pug

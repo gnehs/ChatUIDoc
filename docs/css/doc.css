@@ -10,21 +10,46 @@ header.ts.fluid.vertically.padded.heading.slate {
 .grid {
   margin: 0rem !important; }
   .grid > .column {
-    padding-top: 1rem !important; }
+    padding-top: 1rem !important;
+    padding-left: 1em !important;
+    padding-right: 1em !important; }
+
+.header {
+  font-weight: normal !important; }
 
 nav {
-  padding-left: 1em !important;
-  padding-right: 1em !important;
   background-color: #33417c; }
   nav .header {
-    color: #FFF !important;
-    font-weight: normal !important; }
+    color: #FFF !important; }
   nav .item {
     font-size: 16px; }
     nav .item:hover {
       background: #283468 !important; }
     nav .item:active {
       background: #1d264a !important; }
+
+code {
+  font-family: 'Ubuntu Mono', monospace;
+  word-break: break-all; }
+  code > span {
+    font-family: 'Ubuntu Mono', monospace;
+    word-break: break-all; }
+    code > span > span {
+      font-family: 'Ubuntu Mono', monospace;
+      word-break: break-all; }
+
+.code {
+  font-family: 'Ubuntu Mono', monospace;
+  word-break: break-all; }
+  .code mark {
+    font-family: 'Ubuntu Mono', monospace;
+    word-break: break-all; }
+
+.ts.top.attached.label:first-child + :not(.attached) {
+  margin-top: 0rem !important; }
+
+pre {
+  margin: 0px; }
 
 @media (max-width: 768px) {
   nav {

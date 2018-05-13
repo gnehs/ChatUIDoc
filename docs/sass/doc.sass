@@ -1,4 +1,4 @@
-header.ts.fluid.vertically.padded.heading.slate
+header.ts.slate
     background-color: #3e5099
     & h1.header
         color: #FFF
@@ -10,19 +10,44 @@ header.ts.fluid.vertically.padded.heading.slate
     margin: 0rem !important
     &>.column
         padding-top: 1rem !important
+        padding-left: 1em !important
+        padding-right: 1em !important
+.header
+    font-weight: normal !important
+// nav
 nav 
-    padding-left: 1em !important
-    padding-right: 1em !important
     background-color: #33417c
     & .header
         color: #FFF !important
-        font-weight: normal !important
     & .item
         font-size: 16px
         &:hover
             background: #283468 !important
         &:active
             background: #1d264a !important
+// code
+code
+  font-family: 'Ubuntu Mono', monospace
+  word-break: break-all
+  > span
+    font-family: 'Ubuntu Mono', monospace
+    word-break: break-all
+    > span
+      font-family: 'Ubuntu Mono', monospace
+      word-break: break-all
+
+.code
+  font-family: 'Ubuntu Mono', monospace
+  word-break: break-all
+  mark
+    font-family: 'Ubuntu Mono', monospace
+    word-break: break-all
+
+.ts.top.attached.label:first-child + :not(.attached)
+  margin-top: 0rem !important
+
+pre
+  margin: 0px
 // rwd
 @media(max-width: 768px)
     nav 
