@@ -2,12 +2,15 @@
   line-height: 1;
 }
 
-.cu.chat img {
+.cu.chat img, .cu.chat video, .cu.chat iframe {
   vertical-align: top;
 }
 
 header.ts.slate {
   background-color: #3e5099;
+  margin-left: -1.6rem;
+  margin-right: -1.6rem;
+  width: calc(100% + 3.2rem) !important;
 }
 
 header.ts.slate h1.header {
@@ -24,66 +27,77 @@ header.ts.slate .cu.chat {
   margin: 0rem !important;
 }
 
-.grid > .column {
+.grid > .column:not(#nav) {
+  overflow-y: auto;
+  max-height: 100vh;
   padding-top: 1rem !important;
-  padding-left: 1.6em !important;
-  padding-right: 1.6em !important;
+  padding-left: 1.6rem !important;
+  padding-right: 1.6rem !important;
 }
 
-.grid > .column:not(nav) {
-  width: calc(100vw - 400px);
-}
-
-.header {
+.ts.header {
   font-weight: normal !important;
 }
 
-.header a.anchor {
+.ts.header a.anchor {
   color: #6362dc;
   opacity: 0.1;
   margin-left: -0.6em;
   transition: .1s;
 }
 
-.header:hover a.anchor {
+.ts.header:hover a.anchor {
   opacity: 1;
 }
 
-nav {
+#navbar {
+  margin-top: -1rem;
+  margin-left: -1.6rem;
+  margin-right: -1.6rem;
+}
+
+#navbar a.item[href='#nav'] {
+  display: none;
+}
+
+#navbar, #nav > nav {
   background-color: #33417c;
-  max-width: 400px;
 }
 
-nav .header {
-  color: #FFF !important;
-}
-
-nav .item {
+#navbar .item, #nav > nav .item {
   font-size: 16px;
 }
 
-nav .item:hover {
+#navbar .item.active, #nav > nav .item.active {
+  background: #33417c !important;
+}
+
+#navbar .item:hover, #nav > nav .item:hover {
   background: #283468 !important;
 }
 
-nav .item:active {
+#navbar .item:active, #nav > nav .item:active {
   background: #1d264a !important;
 }
 
-code.hljs {
-  font-family: 'Ubuntu Mono', monospace;
-  word-break: break-all;
-  background: #fff0 !important;
+#nav {
+  padding: 0;
+  height: 100vh;
 }
 
-code.hljs > span {
-  font-family: 'Ubuntu Mono', monospace;
-  word-break: break-all;
+#nav nav {
+  padding-top: 1rem !important;
+  padding-left: 1.6rem !important;
+  padding-right: 1.6rem !important;
+  max-width: 400px;
+  margin: 0 !important;
+  overflow-y: scroll;
+  max-height: 100vh;
+  margin-top: -2em !important;
 }
 
-code.hljs > span > span {
-  font-family: 'Ubuntu Mono', monospace;
-  word-break: break-all;
+#nav nav .header {
+  color: #FFF !important;
 }
 
 .code {
@@ -100,17 +114,92 @@ code.hljs > span > span {
   margin-top: 0rem !important;
 }
 
+.prettyprinted {
+  overflow-x: scroll;
+}
+
+.prettyprinted ol.linenums {
+  padding-left: 0;
+}
+
+.prettyprinted li.L0, .prettyprinted li.L1, .prettyprinted li.L2, .prettyprinted li.L3, .prettyprinted li.L4,
+.prettyprinted li.L5, .prettyprinted li.L6, .prettyprinted li.L7, .prettyprinted li.L8, .prettyprinted li.L9 {
+  list-style-type: none !important;
+  white-space: inherit;
+}
+
+.prettyprinted li.L1, .prettyprinted li.L3, .prettyprinted li.L5, .prettyprinted li.L7, .prettyprinted li.L9 {
+  background: #0000;
+}
+
+.prettyprinted .tag {
+  color: #a600b1;
+}
+
 pre {
   margin: 0px;
 }
 
 @media (max-width: 768px) {
-  nav {
-    max-width: 100vw;
-    padding-right: .5em !important;
-    padding-left: .5em !important;
-    max-height: 400px;
+  header.ts.slate {
+    margin-top: 2.7rem;
+  }
+  #navbar {
+    margin-top: -1rem;
+    height: 3.75em;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+  }
+  #navbar a.item[href='#nav'] {
+    display: flex;
+  }
+  #navbar a.item[href='https://git.io/esc'] {
+    display: none;
+  }
+  #nav {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    padding: 0 !important;
+    z-index: 5;
+  }
+  #nav nav {
+    max-width: 400px;
+    height: 100%;
     overflow-y: scroll;
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    margin-top: 0 !important;
+  }
+  #nav > a.close {
+    background: rgba(69, 77, 93, 0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: block;
+    visibility: hidden;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    transition: opacity .25s ease;
+    opacity: 0;
+  }
+  #nav:target, #nav:target > a.close {
+    visibility: visible;
+  }
+  #nav:target > nav {
+    transform: none;
+  }
+  #nav:target > a.close {
+    opacity: 1;
+  }
+  #content {
+    width: 100vw !important;
   }
 }
 

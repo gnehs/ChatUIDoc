@@ -3,32 +3,39 @@ html
 	head
 		include _head.pug
 	body
-		include _header.pug
 		.ts.stackable.grid
 			include _nav.pug
-			.column
+			#content.stretched.column
+				#navbar.ts.inverted.primary.menu.top.attached.horizontally.fluid.borderless
+					a.item(href='#nav')
+						i.sidebar.icon
+					a.active.item Chat UI
+					.right.menu
+						a.item(href='https://git.io/esc') 始春延期委員會 
+						a.item(href='https://github.com/EarlySpringCommitee/ChatUI') Github
+				include _header.pug
 				+bigheader('開始使用','從這裡開始吧')
 				+header('引用','下載並解壓縮後，保持資料夾結構，丟到你的網頁目錄，即可開始使用！')
 				+code
 					:markdown-it
 						```html
 						<!-- Chat UI -->
-						<link href="/path/to/css/.cu.chatUI.css" rel="stylesheet">
+						<link href="/path/to/css/ChatUI.css" rel="stylesheet">
 						```
 				+header('外部引用','不放在自家伺服器的方法')
 				+code
 					:markdown-it
 						```html
 						<!-- Chat UI -->
-						<link href="https://earlyspringcommitee.github.io/.cu.chatUI/css/.cu.chatUI.css" rel="stylesheet">
+						<link href="https://earlyspringcommitee.github.io/ChatUI/css/ChatUI.css" rel="stylesheet">
 						```
 				+header('範例','連結在下面，自己戳戳')
-				a(href='https://earlyspringcommitee.github.io/.cu.chatUI/test/testMsgr.html') Msgr
+				a(href='https://earlyspringcommitee.github.io/ChatUI/test/testMsgr.html') Msgr
 				br
-				a(href='https://earlyspringcommitee.github.io/.cu.chatUI/test/test.html') Telegram
+				a(href='https://earlyspringcommitee.github.io/ChatUI/test/test.html') Telegram
 				+bigheader('基本元素','')
-				+header('聊天室','輕鬆簡單開聊')
-				p 使用
+				+header('聊天室','輕鬆開聊')
+				p 使用 
 					code='<div class="cu chat">'
 					|   來建立一個聊天室
 				+code
@@ -38,7 +45,7 @@ html
 						</div>
 						```
 				+header('樣式','也可以自己寫喔 <3')
-				p 建立聊天室後，別忘了透過
+				p 建立聊天室後，別忘了透過 
 					code data-style
 					|   指定樣式
 				+code
@@ -90,7 +97,7 @@ html
 						</div>
 						```
 				+header('右側訊息','訊息可以在右側，就像自己傳送的一樣')
-				p 訊息加入
+				p 訊息加入 
 					code right
 					|  class 就能靠右了
 				.cu.chat(data-style='telegram')
@@ -113,7 +120,7 @@ html
 						</div>
 						```
 				+header('已讀','您可能已經注意到了，在右側訊息內會顯示打勾代表已傳送，在這裡，您可以使用雙勾代表已讀')
-				p 訊息加入
+				p 訊息加入 
 					code read
 					|  class 就能變成已讀
 				.cu.chat(data-style='telegram')
@@ -136,7 +143,7 @@ html
 						</div>
 						```
 				+header('頭貼','「我沒設大頭貼」 O3O')
-				p 使用
+				p 使用 
 					code avatar
 					|   來為訊息加上頭貼
 				.cu.chat(data-style='telegram')
@@ -186,10 +193,10 @@ html
 						</div>
 						```
 				+header('圖片訊息','你想看我去西班牙拍的照片嗎')
-				p 使用
+				p 使用 
 					code img
 					|   class 和
-					code img
+					code="<img>"
 					|   標籤即可在訊息內加入圖片
 				.cu.chat(data-style='telegram')
 					.message.img
@@ -234,7 +241,8 @@ html
 					.message.img.only
 						.avatar(data-initial='熊')
 						.content
-							img(src='https://i.imgur.com/VJJ0zYN.gif')
+							-var random = Math.floor(Math.random()*999)
+							img(src='https://placem.at/things?w=800&txt=ChatUI&random='+random)
 							.meta
 								.item 15:30
 				+code
@@ -244,7 +252,7 @@ html
 							<div class="message img only">
 								<div class="avatar" data-initial="熊"></div>
 								<div class="content">
-									<img src="https://i.imgur.com/VJJ0zYN.gif">
+									<img src="https://placem.at/things?w=800&random=250">
 									<div class="meta">
 										<div class="item">15:30</div>
 									</div>
@@ -253,12 +261,160 @@ html
 						</div>
 						```
 				+header('影片訊息','')
+				p 使用 
+					code video
+					|   class 和
+					code="<video>"
+					|   標籤即可在訊息內加入圖片
+				.cu.chat(data-style='telegram')
+					.message.video
+						.avatar
+							img(src='https://i.imgur.com/6oTWGHZ.png')
+						.content
+							video(src='http://www.coverr.co/s3/mp4/Down-time.mp4',controls)
+							.text 我喜歡狗狗
+							.meta
+								.item 15:38
+				+code
+					:markdown-it
+						```html
+						<div class="cu chat" data-style="telegram">
+							<div class="message video">
+								<div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"></div>
+								<div class="content">
+									<video src="http://www.coverr.co/s3/mp4/Down-time.mp4" controls=""></video>
+									<div class="text">我喜歡狗狗</div>
+									<div class="meta">
+										<div class="item">15:38</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						```
 				+header('單一影片訊息','')
+				p 使用
+					code video only
+					|   class 來表示該訊息僅有影片，此時訊息內不可放置文字內容
+				.cu.chat(data-style='telegram')
+					.message.video.only
+						.avatar
+							img(src='https://i.imgur.com/6oTWGHZ.png')
+						.content
+							video(src='http://www.coverr.co/s3/mp4/Down-time.mp4',controls)
+							.meta
+								.item 15:38
+				+code
+					:markdown-it
+						```html
+						<div class="cu chat" data-style="telegram">
+							<div class="message video only">
+								<div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"></div>
+								<div class="content">
+									<video src="http://www.coverr.co/s3/mp4/Down-time.mp4" controls></video>
+									<div class="meta">
+										<div class="item">15:38</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						```
 				+header('嵌入網頁訊息','')
+				p 使用 
+					code iframe
+					|   class 和
+					code="<iframe>"
+					|   標籤即可在訊息內加入圖片
+				.cu.chat(data-style='telegram')
+					.message.iframe
+						.avatar
+							img(src='https://i.imgur.com/nMMGqle.png')
+						.content
+							.author 丹尼斯
+							<iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							.text 這是偶演ㄉ動畫
+							.meta
+								.item 15:38
+				+code
+					:markdown-it
+						```html
+						<div class="cu chat" data-style="telegram">
+							<div class="message iframe">
+								...
+								<div class="content">
+									<div class="author">丹尼斯</div>
+									<iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0"></iframe>
+									...
+								</div>
+							</div>
+						</div>
+						```
 				+header('單一嵌入網頁訊息','')
-				+header('網頁預覽','')
+				p 使用
+					code iframe only
+					|   class 來表示該訊息僅有嵌入網頁，此時訊息內不可放置文字內容
+				.cu.chat(data-style='telegram')
+					.message.iframe.only
+						.avatar
+							img(src='https://i.imgur.com/nMMGqle.png')
+						.content
+							.author 丹尼斯
+							<iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							.meta
+								.item 15:38
+				+code
+					:markdown-it
+						```html
+						<div class="cu chat" data-style="telegram">
+							<div class="message iframe only">
+								...
+								<div class="content">
+									...
+									<iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0"></iframe>
+									...
+								</div>
+							</div>
+						</div>
+						```
+				+header('連結預覽','')
+				p 使用 
+					code perview
+					|   class 來建立一個連結預覽
+				.cu.chat(data-style='telegram')
+					.message.text.perview
+						.avatar
+							img(src='https://i.imgur.com/6oTWGHZ.png')
+						.content
+							.author 熊貓貓
+							.text
+								a(href='https://gnehs.net/') https://gnehs.net/
+							.perview
+								.title 棒棒勝
+								.header 可愛ㄉ棒棒勝喔
+								.description 住在某鬼島ㄉ高中生
+								img(src='https://avatars0.githubusercontent.com/u/16719720')
+							.meta
+								.item 16:05
+				+code
+					:markdown-it
+						```html
+						<div class="cu chat" data-style="telegram">
+							<div class="message text perview">
+								<div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"></div>
+								<div class="content">
+									...
+									<div class="perview">
+										<div class="title">棒棒勝</div>
+										<div class="header">可愛ㄉ棒棒勝喔</div>
+										<div class="description">住在某鬼島ㄉ高中生</div>
+										<img src="https://avatars0.githubusercontent.com/u/16719720">
+									</div>
+									...
+								</div>
+							</div>
+						</div>
+						```
 				+bigheader('樣式','')
-				+header('樣式','')
+				+header('樣式介紹','')
 				+bigheader('Messenger','')
 				+header('Messenger 無法使用的元素','')
 				+bigheader('Telegram','')

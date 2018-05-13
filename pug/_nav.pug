@@ -4,8 +4,10 @@ mixin NAVlink(name,link)
         a.item(href=link)=name
     -else
         a.item(href='#'+name)=name
-nav.column
-    .ts.borderless.secondary.relaxed.vertical.menu.inverted
+
+#nav.column
+    a.close(href='#close')
+    nav.ts.borderless.secondary.relaxed.vertical.menu.inverted
         h3.ts.header 從這開始
         +NAVlink('開始使用')
         +NAVlink('範例')
@@ -22,7 +24,9 @@ nav.column
         +NAVlink('單一影片訊息')
         +NAVlink('嵌入網頁訊息')
         +NAVlink('單一嵌入網頁訊息')
-        +NAVlink('網頁預覽')
+        +NAVlink('連結預覽')
+        h4.ts.header 樣式
+        +NAVlink('樣式介紹')
         h4.ts.header Messenger
         +NAVlink('Messenger 無法使用的元素')
         h4.ts.header Telegram
