@@ -22,14 +22,6 @@ var paths = {
 gulp.task('pug', function() {
     return gulp.src(paths.pugWatch)
         .pipe(plumber({ errorHandler: notify.onError('Error: <%= error..message %>') }))
-        .pipe(rename(function(path) {
-            var filename = path.basename.split('_')[1];
-            if (!filename) {
-                return path;
-            }
-            path.basename = filename;
-            return path;
-        }))
         .pipe(pug({
             pretty: true
         }))
@@ -48,7 +40,7 @@ gulp.task('js', function() {
     return gulp.src(paths.jsWatch)
         .pipe(connect.reload());
 });
-gulp.task('html', function() {
+gulp.task('html', ['pug'], function() {
     return gulp.src(paths.htmlWatch)
         .pipe(connect.reload());
 });
