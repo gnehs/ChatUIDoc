@@ -19,14 +19,6 @@ var paths = {
     htmlWatch: './docs/**/*.html'
 };
 
-gulp.task('pug', function() {
-    return gulp.src(paths.pugWatch)
-        .pipe(plumber({ errorHandler: notify.onError('Error: <%= error..message %>') }))
-        .pipe(pug({
-            pretty: true
-        }))
-        .pipe(gulp.dest(paths.html))
-});
 
 gulp.task('sass', function() {
     return gulp.src(paths.sassWatch)
@@ -39,6 +31,14 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
     return gulp.src(paths.jsWatch)
         .pipe(connect.reload());
+});
+gulp.task('pug', function() {
+    return gulp.src(paths.pugWatch)
+        .pipe(plumber({ errorHandler: notify.onError('Error: <%= error..message %>') }))
+        .pipe(pug({
+            pretty: true
+        }))
+        .pipe(gulp.dest(paths.html))
 });
 gulp.task('html', ['pug'], function() {
     return gulp.src(paths.htmlWatch)
