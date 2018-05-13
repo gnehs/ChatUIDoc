@@ -2,6 +2,10 @@
   line-height: 1;
 }
 
+.cu.chat img {
+  vertical-align: top;
+}
+
 header.ts.slate {
   background-color: #3e5099;
 }
@@ -66,18 +70,18 @@ nav .item:active {
   background: #1d264a !important;
 }
 
-code {
+code.hljs {
   font-family: 'Ubuntu Mono', monospace;
   word-break: break-all;
   background: #fff0 !important;
 }
 
-code > span {
+code.hljs > span {
   font-family: 'Ubuntu Mono', monospace;
   word-break: break-all;
 }
 
-code > span > span {
+code.hljs > span > span {
   font-family: 'Ubuntu Mono', monospace;
   word-break: break-all;
 }
