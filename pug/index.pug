@@ -322,12 +322,12 @@ html
 							</div>
 						</div>
 						```
-				+header('嵌入網頁訊息','')
+				+header('嵌入框架訊息','')
 				p 使用 
 					code iframe
 					|   class 和
 					code="<iframe>"
-					|   標籤即可在訊息內加入圖片
+					|   標籤即可在訊息內加入嵌入框架
 				.cu.chat(data-style='telegram')
 					.message.iframe
 						.avatar
@@ -352,16 +352,15 @@ html
 							</div>
 						</div>
 						```
-				+header('單一嵌入網頁訊息','')
+				+header('單一嵌入框架訊息','')
 				p 使用
 					code iframe only
-					|   class 來表示該訊息僅有嵌入網頁，此時訊息內不可放置文字內容
+					|   class 來表示該訊息僅有嵌入框架，此時訊息內不可放置文字內容
 				.cu.chat(data-style='telegram')
 					.message.iframe.only
 						.avatar
 							img(src='https://i.imgur.com/nMMGqle.png')
 						.content
-							.author 丹尼斯
 							<iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							.meta
 								.item 15:38
