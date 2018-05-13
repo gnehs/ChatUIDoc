@@ -1,0 +1,3 @@
+[submodule "pug/jade"]
+	path = pug/jade
+	url = https://github.com/gnehs/Jade

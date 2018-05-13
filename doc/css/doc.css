@@ -1,0 +1,37 @@
+header.ts.fluid.vertically.padded.heading.slate {
+  background-color: #3e5099; }
+  header.ts.fluid.vertically.padded.heading.slate h1.header {
+    color: #FFF;
+    font-weight: 100; }
+  header.ts.fluid.vertically.padded.heading.slate chat.cu {
+    margin: 0 auto;
+    max-width: 500px; }
+
+.grid {
+  margin: 0rem !important; }
+  .grid > .column {
+    padding-top: 1rem !important; }
+
+nav {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  background-color: #33417c; }
+  nav .header {
+    color: #FFF !important;
+    font-weight: normal !important; }
+  nav .item {
+    font-size: 16px; }
+    nav .item:hover {
+      background: #283468 !important; }
+    nav .item:active {
+      background: #1d264a !important; }
+
+@media (max-width: 768px) {
+  nav {
+    padding-right: .5em !important;
+    padding-left: .5em !important;
+    max-height: 400px;
+    overflow-y: scroll; } }
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666; }

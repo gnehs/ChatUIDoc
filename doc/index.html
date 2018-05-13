@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat UI</title>
+        <meta name="description" content="第一天，洨安創造了始春。第二天，始春延期了。第三天，始春持續延期好評熱映中。">
+        <meta name="image" content="og.jpg">
+        <meta itemprop="name" content="Tocas Xiaoan">
+        <meta itemprop="description" content="第一天，洨安創造了始春。第二天，始春延期了。第三天，始春持續延期好評熱映中。">
+        <meta itemprop="image" content="og.jpg">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Tocas Xiaoan">
+        <meta name="twitter:description" content="第一天，洨安創造了始春。第二天，始春延期了。第三天，始春持續延期好評熱映中。">
+        <meta name="twitter:image:src" content="og.jpg">
+        <meta name="og:title" content="Tocas Xiaoan">
+        <meta name="og:description" content="第一天，洨安創造了始春。第二天，始春延期了。第三天，始春持續延期好評熱映中。">
+        <meta name="og:image" content="og.jpg">
+        <meta name="og:url" content="https://xiaoan.tocas-ui.com/">
+        <meta name="og:site_name" content="Tocas Xiaoan">
+        <meta name="og:locale" content="zh_TW">
+        <meta name="og:type" content="website">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tocas UI-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.css" rel="stylesheet">
+    <script href="https://cdnjs.cloudflare.com/ajax/libs/tocas-ui/2.3.3/tocas.js"></script>
+    <!-- Chat UI-->
+    <link href="https://earlyspringcommitee.github.io/ChatUI/css/ChatUI.css" rel="stylesheet">
+    <!-- typingCarousel https://codepen.io/gschier/pen/jkivt -->
+    <script src="./js/typingCarousel.js"></script>
+    <!-- Doc-->
+    <link href="./css/doc.css" rel="stylesheet">
+    <script src="./js/doc.js"></script>
+  </head>
+  <body>
+    <header class="ts fluid vertically padded heading slate">
+      <div class="ts narrow container">
+        <h1 class="ts header center aligned">Chat UI</h1>
+        <chat class="cu" data-style="telegram">
+          <!-- 左側短文字訊息-->
+          <message class="text">
+            <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"></div>
+            <div class="content">
+              <div class="author">棒棒勝</div>
+              <div class="text">
+                <p>歡迎來到 Chat UI</p>
+              </div>
+              <div class="meta">
+                <div class="item">00:00</div>
+              </div>
+            </div>
+          </message>
+          <!-- 右側短文字訊息-->
+          <message class="text right read">
+            <div class="content">
+              <div class="text">Chat UI <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;尼豪&quot;, &quot;Hello&quot;, &quot;ハロー&quot;, &quot;Bonjour&quot;, &quot;привет&quot;, &quot;❤️&quot; ]"></span></div>
+              <div class="meta">
+                <div class="item">00:00</div>
+              </div>
+            </div>
+          </message>
+        </chat>
+      </div>
+    </header>
+    <div class="ts stackable grid">
+      <nav class="four wide column">
+        <div class="ts borderless secondary relaxed vertical menu inverted">
+          <h3 class="ts header">從這開始</h3><a class="item">開始使用</a><a class="item">範例</a>
+          <h3 class="ts header">樣式</h3><a class="item">介紹</a>
+          <h4 class="ts header">Messenger</h4><a class="item">基本元素</a>
+          <h4 class="ts header">Telegram</h4><a class="item">基本元素</a>
+        </div>
+      </nav>
+      <div class="twelve wide column">4</div>
+    </div>
+  </body>
+</html>
