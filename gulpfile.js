@@ -21,7 +21,7 @@ var paths = {
 
 gulp.task('pug', function() {
     return gulp.src(paths.pugWatch)
-        .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+        .pipe(plumber({ errorHandler: notify.onError('Error: <%= error..message %>') }))
         .pipe(rename(function(path) {
             var filename = path.basename.split('_')[1];
             if (!filename) {
@@ -38,7 +38,7 @@ gulp.task('pug', function() {
 
 gulp.task('sass', function() {
     return gulp.src(paths.sassWatch)
-        .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+        .pipe(plumber({ errorHandler: notify.onError('Error: <%= error..message %>') }))
         .pipe(sass({ outputStyle: 'expanded' }))
         .pipe(gulp.dest(paths.css))
         .pipe(connect.reload());

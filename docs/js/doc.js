@@ -6,7 +6,7 @@
      document.querySelectorAll("pre code").forEach(function(node) {
          hljs.highlightBlock(node);
      });
-     document.querySelectorAll("header message .item").forEach(function(node) {
+     document.querySelectorAll("header .message .item").forEach(function(node) {
          node.innerHTML = hour + ':' + minutes;
      });
  };

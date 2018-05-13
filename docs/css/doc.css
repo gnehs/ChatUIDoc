@@ -1,3 +1,7 @@
+.cu.chat {
+  line-height: 1;
+}
+
 header.ts.slate {
   background-color: #3e5099;
 }
@@ -7,7 +11,7 @@ header.ts.slate h1.header {
   font-weight: 100;
 }
 
-header.ts.slate chat.cu {
+header.ts.slate .cu.chat {
   margin: 0 auto;
   max-width: 500px;
 }
@@ -22,6 +26,10 @@ header.ts.slate chat.cu {
   padding-right: 1.6em !important;
 }
 
+.grid > .column:not(nav) {
+  width: calc(100vw - 400px);
+}
+
 .header {
   font-weight: normal !important;
 }
@@ -30,6 +38,7 @@ header.ts.slate chat.cu {
   color: #6362dc;
   opacity: 0.1;
   margin-left: -0.6em;
+  transition: .1s;
 }
 
 .header:hover a.anchor {
@@ -38,6 +47,7 @@ header.ts.slate chat.cu {
 
 nav {
   background-color: #33417c;
+  max-width: 400px;
 }
 
 nav .header {
@@ -59,6 +69,7 @@ nav .item:active {
 code {
   font-family: 'Ubuntu Mono', monospace;
   word-break: break-all;
+  background: #fff0 !important;
 }
 
 code > span {
@@ -91,6 +102,7 @@ pre {
 
 @media (max-width: 768px) {
   nav {
+    max-width: 100vw;
     padding-right: .5em !important;
     padding-left: .5em !important;
     max-height: 400px;

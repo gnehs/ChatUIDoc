@@ -6,35 +6,253 @@ html
         include _header.pug
         .ts.stackable.grid
             include _nav.pug
-            .twelve.wide.column
+            .column
                 +bigheader('開始使用','從這裡開始吧')
                 +header('引用','下載並解壓縮後，保持資料夾結構，丟到你的網頁目錄，即可開始使用！')
                 +code
                     :markdown-it(linkify langPrefix='highlight-')
                         ```html
-                        <!-- Chat UI-->
-                        <link href="/path/to/css/ChatUI.css" rel="stylesheet">
+                        <!-- Chat UI -->
+                        <link href="/path/to/css/.cu.chatUI.css" rel="stylesheet">
                         ```
                 +header('外部引用','不放在自家伺服器的方法')
                 +code
                     :markdown-it(linkify langPrefix='highlight-')
                         ```html
-                        <!-- Chat UI-->
-                        <link href="https://earlyspringcommitee.github.io/ChatUI/css/ChatUI.css" rel="stylesheet">
+                        <!-- Chat UI -->
+                        <link href="https://earlyspringcommitee.github.io/.cu.chatUI/css/.cu.chatUI.css" rel="stylesheet">
                         ```
                 +header('範例','連結在下面，自己戳戳')
-                a(href='https://earlyspringcommitee.github.io/ChatUI/test/testMsgr.html') Msgr
+                a(href='https://earlyspringcommitee.github.io/.cu.chatUI/test/testMsgr.html') Msgr
                 br
-                a(href='https://earlyspringcommitee.github.io/ChatUI/test/test.html') Telegram
+                a(href='https://earlyspringcommitee.github.io/.cu.chatUI/test/test.html') Telegram
                 +bigheader('基本元素','')
-                +header('聊天室','搭拉，就像這樣')
-                +header('訊息','')
-                +header('圖片訊息','')
-                +header('單一圖片訊息','')
+                +header('聊天室','輕鬆簡單開聊')
+                p 使用 
+                    code='<div class="cu chat">' 
+                    |   來建立一個聊天室 
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <div class="cu chat">
+                        </div>
+                        ```
+                +header('樣式','也可以自己寫喔 <3')
+                p 建立聊天室後，別忘了透過 
+                    code data-style
+                    |   指定樣式
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <!-- 使用 Telegram 樣式 -->
+                        <div class="cu chat" data-style="telegram">
+                        </div>
+                        ```
+                +header('訊息','傳遞第一則文字訊息')
+                p 請記住，任何訊息都要放在聊天室內
+                .cu.chat(data-style='telegram')
+                    .message.text
+                        .avatar
+                            img(src='https://i.imgur.com/6oTWGHZ.png')
+                        .content
+                            .author 熊貓貓
+                            .text
+                                p 尼好，世界
+                            .meta
+                                .item 13:20
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <div class="cu chat" data-style="telegram">
+                            <div class="message text">
+                                <!-- 大頭貼 -->
+                                <div class="avatar">
+                                    <img src="https://i.imgur.com/6oTWGHZ.png"/>
+                                </div>
+                                <!-- 內容 -->
+                                <div class="content">
+                                    <!-- 傳訊者 -->
+                                    <div class="author">
+                                        熊貓貓
+                                    </div>
+                                    <!-- 文字 -->
+                                    <div class="text">
+                                        <p>尼好，世界</p>
+                                    </div>
+                                    <!-- 中繼資料 -->
+                                    <div class="meta">
+                                        <div class="item">
+                                            13:20
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        ```
+                +header('右側訊息','訊息可以在右側，就像自己傳送的一樣')
+                p 訊息加入 
+                    code right
+                    |  class 就能靠右了
+                .cu.chat(data-style='telegram')
+                    .message.text.right
+                        .avatar
+                            img(src='https://i.imgur.com/6oTWGHZ.png')
+                        .content
+                            .author 熊貓貓
+                            .text
+                                p 藍藍的天空，承載了許多想像
+                            .meta
+                                .item 13:20
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <div class="cu chat" data-style="telegram">
+                            <div class="message text right">
+                                ...
+                             </div>
+                        </div>
+                        ```
+                +header('已讀','您可能已經注意到了，在右側訊息內會顯示打勾代表已傳送，在這裡，您可以使用雙勾代表已讀')
+                p 訊息加入 
+                    code read
+                    |  class 就能變成已讀
+                .cu.chat(data-style='telegram')
+                    .message.text.right.read
+                        .avatar
+                            img(src='https://i.imgur.com/6oTWGHZ.png')
+                        .content
+                            .author 熊貓貓
+                            .text
+                                p 下過雨的天空，灰灰的，有點溫柔
+                            .meta
+                                .item 13:20
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <div class="cu chat" data-style="telegram">
+                            <div class="message text right read">
+                                ...
+                             </div>
+                        </div>
+                        ```
+                +header('頭貼','「我沒設大頭貼」 O3O')
+                p 使用 
+                    code avatar
+                    |   來為訊息加上頭貼
+                .cu.chat(data-style='telegram')
+                    .message.text
+                        .avatar
+                            img(src='https://i.imgur.com/6oTWGHZ.png')
+                        .content
+                            .author 熊貓貓
+                            .text
+                                p 下過雨的天空，灰灰的，有點溫柔
+                            .meta
+                                .item 13:20
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <div class="cu chat" data-style="telegram">
+                            <div class="message text">
+                                <!-- 大頭貼 -->
+                                <div class="avatar">
+                                    <img src="https://i.imgur.com/6oTWGHZ.png"/>
+                                </div>
+                                ...
+                             </div>
+                        </div>
+                        ```
+                p 使用 
+                    code data-initial
+                    |   來為沒頭貼雞掰人的頭貼區加點文字
+                .cu.chat(data-style='telegram')
+                    .message.text
+                        .avatar(data-initial='紫')
+                        .content
+                            .author 紫色派大星
+                            .text
+                                p ㄏㄏ，我就是沒設大頭貼啊，咬我啊
+                            .meta
+                                .item 13:20
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <div class="cu chat" data-style="telegram">
+                            <div class="message text">
+                                <!-- 大頭貼 -->
+                                <div class="avatar" data-initial="紫"></div>
+                                ...
+                             </div>
+                        </div>
+                        ```
+                +header('圖片訊息','你想看我去西班牙拍的照片嗎')
+                p 使用 
+                    code img
+                    |   class 和
+                    code img
+                    |   標籤即可在訊息內加入圖片
+                .cu.chat(data-style='telegram')
+                    .message.img
+                        .avatar(data-initial='熊')
+                        .content
+                            .author 熊貓貓
+                            img(src='https://i.imgur.com/VJJ0zYN.gif')
+                            .text 
+                                p 別擔心，孩子。
+                                p 當你跟我一樣有了工作，你會錯過每個夏天。
+                            .meta
+                                .item 15:30
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <div class="cu chat" data-style="telegram">
+                            <div class="message img">
+                                <div class="avatar" data-initial="熊"></div>
+                                <div class="content">
+                                <div class="author">熊貓貓</div>
+                                <img src="https://i.imgur.com/VJJ0zYN.gif">
+                                <div class="text"> 
+                                    <p>別擔心，孩子。</p>
+                                    <p>當你跟我一樣有了工作，你會錯過每個夏天。</p>
+                                </div>
+                                <div class="meta">
+                                    <div class="item">15:30</div>
+                                </div>
+                                </div>
+                             </div>
+                        </div>
+                        ```
+                +header('單一圖片訊息','快看，是一張圖片')
+                p 使用 
+                    code img only
+                    |   class 來表示該訊息僅有一張圖片，此時訊息內不可放置文字內容
+                .cu.chat(data-style='telegram')
+                    .message.img.only
+                        .avatar(data-initial='熊')
+                        .content
+                            img(src='https://i.imgur.com/VJJ0zYN.gif')
+                            .meta
+                                .item 15:30
+                +code
+                    :markdown-it(linkify langPrefix='highlight-')
+                        ```html
+                        <div class="cu chat" data-style="telegram">
+                            <div class="message img only">
+                                <div class="avatar" data-initial="熊"></div>
+                                <div class="content">
+                                    <img src="https://i.imgur.com/VJJ0zYN.gif">
+                                    <div class="meta">
+                                        <div class="item">15:30</div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                        ```
                 +header('影片訊息','')
                 +header('單一影片訊息','')
                 +header('嵌入網頁訊息','')
                 +header('單一嵌入網頁訊息','')
+                +header('網頁預覽','')
                 +bigheader('樣式','')
                 +header('樣式','')
                 +bigheader('Messenger','')

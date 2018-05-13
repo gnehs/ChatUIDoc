@@ -1,9 +1,9 @@
 header.ts.fluid.vertically.padded.heading.slate
     .ts.narrow.container
         h1.ts.header.center.aligned Chat UI
-        chat.cu(data-style='telegram')
+        .cu.chat(data-style='telegram')
             // 左側短文字訊息
-            message.text
+            .message.text
                 .avatar
                     img(src='https://i.imgur.com/6oTWGHZ.png')
                 .content
@@ -11,13 +11,12 @@ header.ts.fluid.vertically.padded.heading.slate
                     .text
                         p 歡迎來到 Chat UI
                     .meta
-                        .item 00:00
+                        .item
             // 右側短文字訊息
-            message.text.right.read
+            .message.text.right.read
                 .content
                     .text
-                        | Chat UI 
                         span.txt-rotate(data-period='2000', 
-                                        data-rotate='["尼豪", "Hello", "ハロー", "Bonjour"]')
+                                        data-rotate='["尼豪！", "Hello!", "ハロー！", "Bonjour!"]')
                     .meta
-                        .item 00:00
+                        .item

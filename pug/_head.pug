@@ -4,7 +4,7 @@ include ./jade/_tags.jade
 meta(charset='utf-8')
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
 // Tocas UI
-include ./jade/_tocasui.jade
+link(href='./css/tocas.css', rel='stylesheet')
 // Chat UI
 link(href='https://earlyspringcommitee.github.io/ChatUI/css/ChatUI.css', rel='stylesheet')
 // typingCarousel https://codepen.io/gschier/pen/jkivt 
@@ -35,4 +35,3 @@ mixin code
     .ts.secondary.code.segment
         .ts.top.right.attached.label 原始碼
         block
-    br
