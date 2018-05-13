@@ -8,7 +8,7 @@ var connect = require('gulp-connect');
 
 var paths = {
     // css
-    sassWatch: './docs/scss/**/*.scss',
+    sassWatch: './docs/sass/**/*.sass',
     css: './docs/css', //儲存到根目錄底下的css資料夾
     // html
     pugWatch: './pug/**/*.pug',

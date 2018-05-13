@@ -17,8 +17,17 @@ link(href='./css/doc.css', rel='stylesheet')
 script(src='./js/doc.js')
 
 //- 標題用模板
+mixin bigheader(name,subheader) 
+    h2.ts.header(id=name)
+        a.anchor(href='#'+name) #
+        =name
+        block
+        span.sub.header=subheader
+//- 標題用模板
 mixin header(name,subheader) 
-    h2.ts.header(id=name)=name
+    h3.ts.header(id=name)
+        a.anchor(href='#'+name) #
+        =name
         block
         span.sub.header=subheader
 //- 程式碼用模板
