@@ -94,6 +94,10 @@ header.ts.slate .cu.chat {
   color: #FFF !important;
 }
 
+.ts.segment.code.secondary {
+  overflow: hidden;
+}
+
 .code {
   font-family: 'Ubuntu Mono', monospace;
   word-break: break-all;
