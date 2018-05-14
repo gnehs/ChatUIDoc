@@ -41,7 +41,8 @@ header.ts.slate
     .item
         font-size: 16px
         &.active
-            background: #33417c !important
+            background: #0000 !important
+            pointer-events: none
         &:hover
             background: #283468 !important
         &:active
@@ -97,6 +98,7 @@ pre
         position: fixed
         z-index: 2
         width: 100%
+        background: linear-gradient(to right, #33417c ,#3e5099 )
         a.item[href='#sidebar']
             display: flex
         a.item[href='https://git.io/esc']
