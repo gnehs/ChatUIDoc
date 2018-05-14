@@ -12,7 +12,7 @@ header.ts.slate
         max-width: 500px
 .grid
     margin: 0rem !important
-    >.column:not(#nav)
+    >#content
         overflow-y: auto
         max-height: 100vh
         padding-top: 1rem !important
@@ -20,6 +20,8 @@ header.ts.slate
         padding-right: 1.6rem !important
 .ts.header
     font-weight: normal !important
+    // Chrome fix
+    min-height: 1.25em
     a.anchor
         color: #6362dc
         opacity: 0.1
@@ -32,9 +34,9 @@ header.ts.slate
     margin-top: -1rem
     margin-left: -1.6rem
     margin-right: -1.6rem
-    a.item[href='#nav']
+    a.item[href='#sidebar']
         display: none
-#navbar,#nav>nav
+#navbar,#sidebar>nav
     background-color: #33417c
     .item
         font-size: 16px
@@ -44,8 +46,8 @@ header.ts.slate
             background: #283468 !important
         &:active
             background: #1d264a !important
-// nav/sidebar
-#nav 
+// sidebar
+#sidebar 
     padding: 0
     height: 100vh
     & nav
@@ -56,7 +58,7 @@ header.ts.slate
         margin: 0 !important
         overflow-y: scroll
         max-height: 100vh
-        margin-top: -2em !important
+        margin-top: 0em !important
         .header
             color: #FFF !important
 // code
@@ -95,11 +97,11 @@ pre
         position: fixed
         z-index: 2
         width: 100%
-        a.item[href='#nav']
+        a.item[href='#sidebar']
             display: flex
         a.item[href='https://git.io/esc']
             display: none
-    #nav 
+    #sidebar 
         position: fixed
         height: 100%
         width: 100%
@@ -117,7 +119,7 @@ pre
             transition: transform .25s ease
             margin-top: 0 !important
         >a.close 
-            background: rgba(69,77,93,.7)
+            background: rgba(11, 0, 29, 0.46)
             height: 100%
             width: 100%
             position: fixed

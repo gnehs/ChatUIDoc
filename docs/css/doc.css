@@ -19,7 +19,7 @@ header.ts.slate .cu.chat {
   margin: 0rem !important;
 }
 
-.grid > .column:not(#nav) {
+.grid > #content {
   overflow-y: auto;
   max-height: 100vh;
   padding-top: 1rem !important;
@@ -29,6 +29,7 @@ header.ts.slate .cu.chat {
 
 .ts.header {
   font-weight: normal !important;
+  min-height: 1.25em;
 }
 
 .ts.header a.anchor {
@@ -48,36 +49,36 @@ header.ts.slate .cu.chat {
   margin-right: -1.6rem;
 }
 
-#navbar a.item[href='#nav'] {
+#navbar a.item[href='#sidebar'] {
   display: none;
 }
 
-#navbar, #nav > nav {
+#navbar, #sidebar > nav {
   background-color: #33417c;
 }
 
-#navbar .item, #nav > nav .item {
+#navbar .item, #sidebar > nav .item {
   font-size: 16px;
 }
 
-#navbar .item.active, #nav > nav .item.active {
+#navbar .item.active, #sidebar > nav .item.active {
   background: #33417c !important;
 }
 
-#navbar .item:hover, #nav > nav .item:hover {
+#navbar .item:hover, #sidebar > nav .item:hover {
   background: #283468 !important;
 }
 
-#navbar .item:active, #nav > nav .item:active {
+#navbar .item:active, #sidebar > nav .item:active {
   background: #1d264a !important;
 }
 
-#nav {
+#sidebar {
   padding: 0;
   height: 100vh;
 }
 
-#nav nav {
+#sidebar nav {
   padding-top: 1rem !important;
   padding-left: 1.6rem !important;
   padding-right: 1.6rem !important;
@@ -85,10 +86,10 @@ header.ts.slate .cu.chat {
   margin: 0 !important;
   overflow-y: scroll;
   max-height: 100vh;
-  margin-top: -2em !important;
+  margin-top: 0em !important;
 }
 
-#nav nav .header {
+#sidebar nav .header {
   color: #FFF !important;
 }
 
@@ -143,13 +144,13 @@ pre {
     z-index: 2;
     width: 100%;
   }
-  #navbar a.item[href='#nav'] {
+  #navbar a.item[href='#sidebar'] {
     display: flex;
   }
   #navbar a.item[href='https://git.io/esc'] {
     display: none;
   }
-  #nav {
+  #sidebar {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -157,7 +158,7 @@ pre {
     padding: 0 !important;
     z-index: 5;
   }
-  #nav nav {
+  #sidebar nav {
     max-width: 400px;
     height: 100%;
     overflow-y: scroll;
@@ -168,8 +169,8 @@ pre {
     transition: transform .25s ease;
     margin-top: 0 !important;
   }
-  #nav > a.close {
-    background: rgba(69, 77, 93, 0.7);
+  #sidebar > a.close {
+    background: rgba(11, 0, 29, 0.46);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -181,13 +182,13 @@ pre {
     transition: opacity .25s ease;
     opacity: 0;
   }
-  #nav:target, #nav:target > a.close {
+  #sidebar:target, #sidebar:target > a.close {
     visibility: visible;
   }
-  #nav:target > nav {
+  #sidebar:target > nav {
     transform: none;
   }
-  #nav:target > a.close {
+  #sidebar:target > a.close {
     opacity: 1;
   }
   #content {

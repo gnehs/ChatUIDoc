@@ -5,8 +5,7 @@ mixin NAVlink(name,link)
     -else
         a.item(href='#'+name)=name
 
-#nav.column
-    a.close(href='#close')
+#sidebar.column
     nav.ts.borderless.secondary.relaxed.vertical.menu.inverted
         h3.ts.header 從這開始
         +NAVlink('開始使用')
@@ -33,3 +32,4 @@ mixin NAVlink(name,link)
         +NAVlink('Messenger 無法使用的元素')
         h4.ts.header Telegram
         +NAVlink('Telegram 無法使用的元素')
+    a.close(href='#close')
