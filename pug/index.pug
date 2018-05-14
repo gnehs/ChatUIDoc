@@ -44,7 +44,7 @@ html
 						<div class="cu chat">
 						</div>
 						```
-				+header('樣式','也可以自己寫喔 <3')
+				+header('樣式','也可以自己寫喔')
 				p 建立聊天室後，別忘了透過 
 					code data-style
 					|   指定樣式
@@ -55,7 +55,7 @@ html
 						<div class="cu chat" data-style="telegram">
 						</div>
 						```
-				+header('訊息','傳遞第一則文字訊息')
+				+header('訊息','傳遞給你我的第一則文字訊息')
 				p 請記住，任何訊息都要放在聊天室內
 				.cu.chat(data-style='telegram')
 					.message.text
@@ -352,7 +352,7 @@ html
 							</div>
 						</div>
 						```
-				+header('單一嵌入框架訊息','')
+				+header('單一嵌入框架訊息','不管想塞什麼進去都可以喔？！')
 				p 使用
 					code iframe only
 					|   class 來表示該訊息僅有嵌入框架，此時訊息內不可放置文字內容
@@ -416,11 +416,126 @@ html
 							</div>
 						</div>
 						```
-				+bigheader('樣式','')
-				+header('樣式介紹','')
-				+bigheader('Messenger','')
-				+header('Messenger 無法使用的元素','')
-				+bigheader('Telegram','')
-				+header('Telegram 無法使用的元素','')
+				+header('分隔線','嘿，這是我昨天的訊息，快看看')
+				p 如果你要會飄的，因為還沒寫 js 套件，所以還很 bug
+				.cu.chat(data-style='telegram')
+					divider 2月31日
+					.message.text.right
+						.content
+							.text
+								p 我身處新世界
+							.meta
+								.item 13:23
+				+code
+					:markdown-it
+						```html
+						<divider>2月31日</divider>
+						```
+				+bigheader('進階','一些你可能不是那麼常用的東西')
+				+header('回覆','我可以回復一大堆鳥東東嗎')
+				p 請注意，目前尚不支援圖片
+				.cu.chat(data-style='telegram')
+					.message.iframe
+						.avatar
+							img(src='https://i.imgur.com/nMMGqle.png')
+						.content
+							.author 丹尼斯
+							<iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							.text 這是偶演ㄉ動畫
+							.meta
+								.item 15:38
+					.message.text.right
+						.content
+							.reply
+								.author 丹尼斯
+								.content
+									.text 影片,這是偶演ㄉ動畫
+							.text
+								p 哇嗚，超可愛的
+							.meta
+								.item 13:23
+				+code
+					:markdown-it
+						```html
+						<div class="message text right">
+							<div class="content">
+								<div class="reply">
+									<div class="author">丹尼斯</div>
+									<div class="content">
+									<div class="text">影片,這是偶演ㄉ動畫</div>
+									</div>
+								</div>
+								<div class="text">
+									<p>哇嗚，超可愛的</p>
+								</div>
+								<div class="meta">
+									<div class="item">13:23</div>
+								</div>
+							</div>
+						</div>
+						```
+				+header('訊息群組','把訊息串在一起')
+				.cu.chat(data-style='messenger')
+					.message-group
+						.message.text
+							.avatar(data-initial='熊')
+							.content
+								.author 熊貓貓
+								.text 
+									p 我想跟跳跳虎結婚
+						.message.text
+							.avatar(data-initial='熊')
+							.content
+								.author 熊貓貓
+								.text 
+									p 我說跳跳虎
+						.message.text
+							.avatar(data-initial='熊')
+							.content
+								.author 熊貓貓
+								.text 
+									p 頑皮豹也可以啦
+				+code
+					:markdown-it
+						```html
+						<div class="cu chat" data-style="messenger">
+							<div class="message-group">
+								<div class="message text">
+								<div class="avatar" data-initial="熊"></div>
+								<div class="content">
+									<div class="author">熊貓貓</div>
+									<div class="text"> 
+									<p>我想跟跳跳虎結婚</p>
+									</div>
+								</div>
+								</div>
+								<div class="message text">
+								<div class="avatar" data-initial="熊"></div>
+								<div class="content">
+									<div class="author">熊貓貓</div>
+									<div class="text"> 
+									<p>我說跳跳虎</p>
+									</div>
+								</div>
+								</div>
+								<div class="message text">
+								<div class="avatar" data-initial="熊"></div>
+								<div class="content">
+									<div class="author">熊貓貓</div>
+									<div class="text"> 
+									<p>頑皮豹也可以啦</p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						```
+				//-
+					+bigheader('樣式','')
+					+header('樣式介紹','')
+					+bigheader('Messenger','')
+					+header('Messenger 無法使用的元素','')
+					+bigheader('Telegram','')
+					+header('Telegram 無法使用的元素','')
 
 		include _footer.pug

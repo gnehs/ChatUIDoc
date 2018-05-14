@@ -37,10 +37,8 @@
       <div class="column" id="sidebar">
         <nav class="ts borderless secondary relaxed vertical menu inverted">
           <h3 class="ts header">從這開始</h3><a class="item" href="#開始使用">開始使用</a><a class="item" href="#引用">引用</a><a class="item" href="#外部引用">外部引用</a><a class="item" href="#範例">範例</a>
-          <h3 class="ts header">基本元素</h3><a class="item" href="#聊天室">聊天室</a><a class="item" href="#樣式">樣式</a><a class="item" href="#訊息">訊息</a><a class="item" href="#右側訊息">右側訊息</a><a class="item" href="#已讀">已讀</a><a class="item" href="#頭貼">頭貼</a><a class="item" href="#圖片訊息">圖片訊息</a><a class="item" href="#單一圖片訊息">單一圖片訊息</a><a class="item" href="#影片訊息">影片訊息</a><a class="item" href="#單一影片訊息">單一影片訊息</a><a class="item" href="#嵌入框架訊息">嵌入框架訊息</a><a class="item" href="#單一嵌入框架訊息">單一嵌入框架訊息</a><a class="item" href="#連結預覽">連結預覽</a>
-          <h4 class="ts header">樣式</h4><a class="item" href="#樣式介紹">樣式介紹</a>
-          <h4 class="ts header">Messenger</h4><a class="item" href="#Messenger 無法使用的元素">Messenger 無法使用的元素</a>
-          <h4 class="ts header">Telegram</h4><a class="item" href="#Telegram 無法使用的元素">Telegram 無法使用的元素</a>
+          <h3 class="ts header">基本元素</h3><a class="item" href="#聊天室">聊天室</a><a class="item" href="#樣式">樣式</a><a class="item" href="#訊息">訊息</a><a class="item" href="#右側訊息">右側訊息</a><a class="item" href="#已讀">已讀</a><a class="item" href="#頭貼">頭貼</a><a class="item" href="#圖片訊息">圖片訊息</a><a class="item" href="#單一圖片訊息">單一圖片訊息</a><a class="item" href="#影片訊息">影片訊息</a><a class="item" href="#單一影片訊息">單一影片訊息</a><a class="item" href="#嵌入框架訊息">嵌入框架訊息</a><a class="item" href="#單一嵌入框架訊息">單一嵌入框架訊息</a><a class="item" href="#連結預覽">連結預覽</a><a class="item" href="#分隔線">分隔線</a>
+          <h4 class="ts header">進階</h4><a class="item" href="#回覆">回覆</a><a class="item" href="#訊息群組">訊息群組</a>
         </nav><a class="close" href="#close"></a>
       </div>
       <div class="stretched column" id="content">
@@ -107,7 +105,7 @@
 </code></pre>
 
             </div>
-            <h3 class="ts header" id="樣式"><a class="anchor" href="#樣式">#</a>樣式<span class="sub header">也可以自己寫喔 &lt;3</span>
+            <h3 class="ts header" id="樣式"><a class="anchor" href="#樣式">#</a>樣式<span class="sub header">也可以自己寫喔</span>
             </h3>
         <p>建立聊天室後，別忘了透過 <code>data-style</code>  指定樣式</p>
             <div class="ts secondary code segment">
@@ -117,7 +115,7 @@
 </code></pre>
 
             </div>
-            <h3 class="ts header" id="訊息"><a class="anchor" href="#訊息">#</a>訊息<span class="sub header">傳遞第一則文字訊息</span>
+            <h3 class="ts header" id="訊息"><a class="anchor" href="#訊息">#</a>訊息<span class="sub header">傳遞給你我的第一則文字訊息</span>
             </h3>
         <p>請記住，任何訊息都要放在聊天室內</p>
         <div class="cu chat" data-style="telegram">
@@ -319,7 +317,7 @@
         <div class="cu chat" data-style="telegram">
           <div class="message img only">
             <div class="avatar" data-initial="熊"></div>
-            <div class="content"><img src="https://placem.at/things?w=800&amp;txt=ChatUI&amp;random=27">
+            <div class="content"><img src="https://placem.at/things?w=800&amp;txt=ChatUI&amp;random=247">
               <div class="meta">
                 <div class="item">15:30</div>
               </div>
@@ -434,7 +432,7 @@
 </code></pre>
 
             </div>
-            <h3 class="ts header" id="單一嵌入框架訊息"><a class="anchor" href="#單一嵌入框架訊息">#</a>單一嵌入框架訊息<span class="sub header"></span>
+            <h3 class="ts header" id="單一嵌入框架訊息"><a class="anchor" href="#單一嵌入框架訊息">#</a>單一嵌入框架訊息<span class="sub header">不管想塞什麼進去都可以喔？！</span>
             </h3>
         <p>使用<code>iframe only</code>  class 來表示該訊息僅有嵌入框架，此時訊息內不可放置文字內容</p>
         <div class="cu chat" data-style="telegram">
@@ -500,18 +498,148 @@
 </code></pre>
 
             </div>
-            <h2 class="ts header" id="樣式"><a class="anchor" href="#樣式">#</a>樣式<span class="sub header"></span>
-            </h2>
-            <h3 class="ts header" id="樣式介紹"><a class="anchor" href="#樣式介紹">#</a>樣式介紹<span class="sub header"></span>
+            <h3 class="ts header" id="分隔線"><a class="anchor" href="#分隔線">#</a>分隔線<span class="sub header">嘿，這是我昨天的訊息，快看看</span>
             </h3>
-            <h2 class="ts header" id="Messenger"><a class="anchor" href="#Messenger">#</a>Messenger<span class="sub header"></span>
+        <p>如果你要會飄的，因為還沒寫 js 套件，所以還很 bug</p>
+        <div class="cu chat" data-style="telegram">
+          <divider>2月31日</divider>
+          <div class="message text right">
+            <div class="content">
+              <div class="text">
+                <p>我身處新世界</p>
+              </div>
+              <div class="meta">
+                <div class="item">13:23</div>
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="ts secondary code segment">
+              <div class="ts top right attached label">原始碼</div><?prettify lang=html linenums=true?><pre><code class="language-html">&lt;divider&gt;2月31日&lt;/divider&gt;
+</code></pre>
+
+            </div>
+            <h2 class="ts header" id="進階"><a class="anchor" href="#進階">#</a>進階<span class="sub header">一些你可能不是那麼常用的東西</span>
             </h2>
-            <h3 class="ts header" id="Messenger 無法使用的元素"><a class="anchor" href="#Messenger 無法使用的元素">#</a>Messenger 無法使用的元素<span class="sub header"></span>
+            <h3 class="ts header" id="回覆"><a class="anchor" href="#回覆">#</a>回覆<span class="sub header">我可以回復一大堆鳥東東嗎</span>
             </h3>
-            <h2 class="ts header" id="Telegram"><a class="anchor" href="#Telegram">#</a>Telegram<span class="sub header"></span>
-            </h2>
-            <h3 class="ts header" id="Telegram 無法使用的元素"><a class="anchor" href="#Telegram 無法使用的元素">#</a>Telegram 無法使用的元素<span class="sub header"></span>
+        <p>請注意，目前尚不支援圖片</p>
+        <div class="cu chat" data-style="telegram">
+          <div class="message iframe">
+            <div class="avatar"><img src="https://i.imgur.com/nMMGqle.png"></div>
+            <div class="content">
+              <div class="author">丹尼斯</div><iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <div class="text">這是偶演ㄉ動畫</div>
+              <div class="meta">
+                <div class="item">15:38</div>
+              </div>
+            </div>
+          </div>
+          <div class="message text right">
+            <div class="content">
+              <div class="reply">
+                <div class="author">丹尼斯</div>
+                <div class="content">
+                  <div class="text">影片,這是偶演ㄉ動畫</div>
+                </div>
+              </div>
+              <div class="text">
+                <p>哇嗚，超可愛的</p>
+              </div>
+              <div class="meta">
+                <div class="item">13:23</div>
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="ts secondary code segment">
+              <div class="ts top right attached label">原始碼</div><?prettify lang=html linenums=true?><pre><code class="language-html">&lt;div class=&quot;message text right&quot;&gt;
+	&lt;div class=&quot;content&quot;&gt;
+		&lt;div class=&quot;reply&quot;&gt;
+			&lt;div class=&quot;author&quot;&gt;丹尼斯&lt;/div&gt;
+			&lt;div class=&quot;content&quot;&gt;
+			&lt;div class=&quot;text&quot;&gt;影片,這是偶演ㄉ動畫&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;text&quot;&gt;
+			&lt;p&gt;哇嗚，超可愛的&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;meta&quot;&gt;
+			&lt;div class=&quot;item&quot;&gt;13:23&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+            </div>
+            <h3 class="ts header" id="訊息群組"><a class="anchor" href="#訊息群組">#</a>訊息群組<span class="sub header">把訊息串在一起</span>
             </h3>
+        <div class="cu chat" data-style="messenger">
+          <div class="message-group">
+            <div class="message text">
+              <div class="avatar" data-initial="熊"></div>
+              <div class="content">
+                <div class="author">熊貓貓</div>
+                <div class="text"> 
+                  <p>我想跟跳跳虎結婚</p>
+                </div>
+              </div>
+            </div>
+            <div class="message text">
+              <div class="avatar" data-initial="熊"></div>
+              <div class="content">
+                <div class="author">熊貓貓</div>
+                <div class="text"> 
+                  <p>我說跳跳虎</p>
+                </div>
+              </div>
+            </div>
+            <div class="message text">
+              <div class="avatar" data-initial="熊"></div>
+              <div class="content">
+                <div class="author">熊貓貓</div>
+                <div class="text"> 
+                  <p>頑皮豹也可以啦</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="ts secondary code segment">
+              <div class="ts top right attached label">原始碼</div><?prettify lang=html linenums=true?><pre><code class="language-html">&lt;div class=&quot;cu chat&quot; data-style=&quot;messenger&quot;&gt;
+	&lt;div class=&quot;message-group&quot;&gt;
+		&lt;div class=&quot;message text&quot;&gt;
+		&lt;div class=&quot;avatar&quot; data-initial=&quot;熊&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;div class=&quot;author&quot;&gt;熊貓貓&lt;/div&gt;
+			&lt;div class=&quot;text&quot;&gt; 
+			&lt;p&gt;我想跟跳跳虎結婚&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;message text&quot;&gt;
+		&lt;div class=&quot;avatar&quot; data-initial=&quot;熊&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;div class=&quot;author&quot;&gt;熊貓貓&lt;/div&gt;
+			&lt;div class=&quot;text&quot;&gt; 
+			&lt;p&gt;我說跳跳虎&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;message text&quot;&gt;
+		&lt;div class=&quot;avatar&quot; data-initial=&quot;熊&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;div class=&quot;author&quot;&gt;熊貓貓&lt;/div&gt;
+			&lt;div class=&quot;text&quot;&gt; 
+			&lt;p&gt;頑皮豹也可以啦&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+            </div>
       </div>
     </div>
   </body>

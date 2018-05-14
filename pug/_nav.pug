@@ -26,10 +26,15 @@ mixin NAVlink(name,link)
         +NAVlink('嵌入框架訊息')
         +NAVlink('單一嵌入框架訊息')
         +NAVlink('連結預覽')
-        h4.ts.header 樣式
-        +NAVlink('樣式介紹')
-        h4.ts.header Messenger
-        +NAVlink('Messenger 無法使用的元素')
-        h4.ts.header Telegram
-        +NAVlink('Telegram 無法使用的元素')
+        +NAVlink('分隔線')
+        h4.ts.header 進階
+        +NAVlink('回覆')
+        +NAVlink('訊息群組')
+        //-
+            h4.ts.header 樣式
+            +NAVlink('樣式介紹')
+            h4.ts.header Messenger
+            +NAVlink('Messenger 無法使用的元素')
+            h4.ts.header Telegram
+            +NAVlink('Telegram 無法使用的元素')
     a.close(href='#close')
