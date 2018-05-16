@@ -15,7 +15,6 @@ header.ts.slate h1.header {
 }
 
 header.ts.slate .cu.chat {
-  border: none;
   margin: 0 auto;
   max-width: 500px;
 }
@@ -46,15 +45,6 @@ header.ts.slate .cu.chat {
 
 .ts.header:hover a.anchor {
   opacity: 1;
-}
-
-.cu.chat {
-  border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-
-.cu.chat:hover {
-  border: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 #navbar {
@@ -154,7 +144,8 @@ pre {
 
 @media (max-width: 768px) {
   header.ts.slate {
-    margin-top: 2.7rem;
+    margin-top: -1rem;
+    padding-top: 6em  !important;
   }
   .cu.chat {
     font-size: 14px;
@@ -165,7 +156,12 @@ pre {
     position: fixed;
     z-index: 2;
     width: 100%;
-    background: linear-gradient(to right, #33417c, #3e5099);
+    background: #33417c;
+    opacity: .95;
+    transition: all .25s ease;
+  }
+  #navbar:hover {
+    opacity: 1;
   }
   #navbar a.item[href='#sidebar'] {
     display: flex;
@@ -190,7 +186,7 @@ pre {
     position: fixed;
     top: 0;
     transform: translateX(-100%);
-    transition: transform .25s ease;
+    transition: all .25s ease;
     margin-top: 0 !important;
   }
   #sidebar > a.close {
@@ -203,7 +199,7 @@ pre {
     z-index: 5;
     top: 0;
     left: 0;
-    transition: opacity .25s ease;
+    transition: all .25s ease;
     opacity: 0;
   }
   #sidebar:target, #sidebar:target > a.close {
@@ -211,10 +207,7 @@ pre {
     opacity: 1;
   }
   #sidebar:target > nav {
-    transform: translateX(0);
-  }
-  #sidebar:target > a.close {
-    opacity: 1;
+    transform: none;
   }
   #content {
     width: 100vw !important;

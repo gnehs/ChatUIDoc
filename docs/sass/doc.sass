@@ -10,7 +10,6 @@ header.ts.slate
         color: #FFF
         font-weight: 100
     & .cu.chat
-        border: none
         margin: 0 auto
         max-width: 500px
 .grid
@@ -32,11 +31,6 @@ header.ts.slate
         transition: .1s
     &:hover a.anchor
         opacity: 1
-.cu.chat
-    border-radius: 3px
-    border: 1px solid rgba(0, 0, 0, 0)
-    &:hover
-        border: 1px solid rgba(0, 0, 0, 0.07)
 // nav bar
 #navbar
     margin-top: -1rem
@@ -101,7 +95,8 @@ pre
 // rwd
 @media(max-width: 768px)
     header.ts.slate
-        margin-top: 2.7rem
+        margin-top: -1rem
+        padding-top: 6em  !important
     .cu.chat
         font-size: 14px
     #navbar
@@ -110,7 +105,11 @@ pre
         position: fixed
         z-index: 2
         width: 100%
-        background: linear-gradient(to right, #33417c ,#3e5099 )
+        background: #33417c
+        opacity: .95
+        transition: all .25s ease
+        &:hover
+            opacity: 1
         a.item[href='#sidebar']
             display: flex
         a.item[href='https://git.io/esc']
@@ -131,7 +130,7 @@ pre
             position: fixed
             top: 0
             transform: translateX(-100%)
-            transition: transform .25s ease
+            transition: all .25s ease
             margin-top: 0 !important
         >a.close 
             background: rgba(11, 0, 29, 0.46)
@@ -143,15 +142,13 @@ pre
             z-index: 5
             top: 0
             left: 0
-            transition: opacity .25s ease
+            transition: all .25s ease
             opacity: 0
         &:target,&:target>a.close
             visibility: visible
             opacity: 1
         &:target>nav
-            transform: translateX(0)
-        &:target>a.close
-            opacity: 1
+            transform: none
     #content
         width: 100vw !important
 // typingCarousel
