@@ -15,6 +15,7 @@ header.ts.slate h1.header {
 }
 
 header.ts.slate .cu.chat {
+  border: none;
   margin: 0 auto;
   max-width: 500px;
 }
@@ -45,6 +46,11 @@ header.ts.slate .cu.chat {
 
 .ts.header:hover a.anchor {
   opacity: 1;
+}
+
+.cu.chat {
+  border: 2px solid rgba(0, 0, 0, 0.07);
+  border-radius: 3px;
 }
 
 #navbar {
@@ -146,6 +152,9 @@ pre {
   header.ts.slate {
     margin-top: 2.7rem;
   }
+  .cu.chat {
+    font-size: 14px;
+  }
   #navbar {
     margin-top: -1rem;
     height: 3.75em;
@@ -167,6 +176,7 @@ pre {
     visibility: hidden;
     padding: 0 !important;
     z-index: 5;
+    transition: all .25s ease;
   }
   #sidebar nav {
     max-width: 400px;
@@ -194,9 +204,10 @@ pre {
   }
   #sidebar:target, #sidebar:target > a.close {
     visibility: visible;
+    opacity: 1;
   }
   #sidebar:target > nav {
-    transform: none;
+    transform: translateX(0);
   }
   #sidebar:target > a.close {
     opacity: 1;

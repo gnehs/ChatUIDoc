@@ -10,6 +10,7 @@ header.ts.slate
         color: #FFF
         font-weight: 100
     & .cu.chat
+        border: none
         margin: 0 auto
         max-width: 500px
 .grid
@@ -31,6 +32,9 @@ header.ts.slate
         transition: .1s
     &:hover a.anchor
         opacity: 1
+.cu.chat
+    border: 2px solid rgba(0, 0, 0, 0.07)
+    border-radius: 3px
 // nav bar
 #navbar
     margin-top: -1rem
@@ -96,6 +100,8 @@ pre
 @media(max-width: 768px)
     header.ts.slate
         margin-top: 2.7rem
+    .cu.chat
+        font-size: 14px
     #navbar
         margin-top: -1rem
         height: 3.75em
@@ -114,6 +120,7 @@ pre
         visibility: hidden
         padding: 0 !important
         z-index: 5
+        transition: all .25s ease
         & nav
             max-width: 400px
             height: 100%
@@ -138,8 +145,9 @@ pre
             opacity: 0
         &:target,&:target>a.close
             visibility: visible
+            opacity: 1
         &:target>nav
-            transform: none
+            transform: translateX(0)
         &:target>a.close
             opacity: 1
     #content
