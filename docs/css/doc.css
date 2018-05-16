@@ -49,8 +49,12 @@ header.ts.slate .cu.chat {
 }
 
 .cu.chat {
-  border: 2px solid rgba(0, 0, 0, 0.07);
   border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.cu.chat:hover {
+  border: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 #navbar {
