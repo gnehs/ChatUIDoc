@@ -1,5 +1,5 @@
 title Chat UI
-include ./jade/_tags.jade
+include ./jade/_tags.pug
 +social_tags('ChatUI','擁有許多對話氣泡，讓你輕鬆建立一間聊天室的前端 CSS 框架','og.png','https://earlyspringcommitee.github.io/ChatUIDoc/')
 meta(charset='utf-8')
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -14,6 +14,8 @@ script(src='https://rawgit.com/google/code-prettify/master/loader/run_prettify.j
 // Doc
 link(href='./css/doc.css', rel='stylesheet')
 script(src='./js/doc.js')
+// icon
+link(rel='icon', href='https://earlyspringcommitee.github.io/ChatUI/logo/ChatUI.svg', type='image/svg+xml')
 
 //- 標題用模板
 mixin bigheader(name,subheader) 
