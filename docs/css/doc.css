@@ -107,7 +107,7 @@ header.ts.slate .cu.chat {
   word-break: break-all;
 }
 
-.code mark {
+.code * {
   font-family: 'Ubuntu Mono', monospace;
   word-break: break-all;
 }

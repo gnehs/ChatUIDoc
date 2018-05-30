@@ -1,5 +1,5 @@
-// 
-body 
+//
+body
     overflow: hidden
 header.ts.slate
     background-color: #3e5099
@@ -50,7 +50,7 @@ header.ts.slate
         &:active
             background: #1d264a !important
 // sidebar
-#sidebar 
+#sidebar
     padding: 0
     height: 100vh
     & nav
@@ -70,9 +70,10 @@ header.ts.slate
 .code
   font-family: 'Ubuntu Mono', monospace
   word-break: break-all
-  mark
+  *
     font-family: 'Ubuntu Mono', monospace
     word-break: break-all
+
 
 .ts.top.attached.label:first-child + :not(.attached)
   margin-top: 0rem !important
@@ -84,7 +85,7 @@ header.ts.slate
     li.L5, li.L6, li.L7, li.L8, li.L9
         list-style-type: none !important
         white-space: inherit
-    li.L1, li.L3, li.L5, li.L7, li.L9 
+    li.L1, li.L3, li.L5, li.L7, li.L9
         background: #0000
     .tag
         color: #a600b1
@@ -114,7 +115,7 @@ pre
             display: flex
         a.item[href='https://git.io/esc']
             display: none
-    #sidebar 
+    #sidebar
         position: fixed
         height: 100%
         width: 100%
@@ -132,7 +133,7 @@ pre
             transform: translateX(-100%)
             transition: all .25s ease
             margin-top: 0 !important
-        >a.close 
+        >a.close
             background: rgba(11, 0, 29, 0.46)
             height: 100%
             width: 100%
@@ -152,5 +153,5 @@ pre
     #content
         width: 100vw !important
 // typingCarousel
-.txt-rotate > .wrap 
+.txt-rotate > .wrap
     border-right: 0.08em solid #666
