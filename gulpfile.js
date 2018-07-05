@@ -58,6 +58,6 @@ gulp.task('server', function() {
         port: 8880,
         livereload: true
     });
-    console.log('sever: http://localhost:' + 8880)
+    console.log('server: http://localhost:' + 8880)
 });
 gulp.task('default', ['watch', 'pug', 'server']);
