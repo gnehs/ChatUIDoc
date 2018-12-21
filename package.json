@@ -22,12 +22,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/EarlySpringCommitee/ChatUIDoc.git"
+        "url": "git+https://github.com/gnehs/ChatUIDoc.git"
     },
     "author": "gnehs",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/EarlySpringCommitee/ChatUIDoc/issues"
+        "url": "https://github.com/gnehs/ChatUIDoc/issues"
     },
-    "homepage": "https://github.com/EarlySpringCommitee/ChatUIDoc#readme"
+    "homepage": "https://github.com/gnehs/ChatUIDoc#readme"
 }

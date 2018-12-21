@@ -12,11 +12,11 @@ html
 					a.active.item Chat UI
 					.right.menu
 						a.item(href='https://git.io/esc') 始春延期委員會 
-						a.item(href='https://github.com/EarlySpringCommitee/ChatUI') GitHub
+						a.item(href='https://github.com/gnehs/ChatUI') GitHub
 				include _header.pug
 				+bigheader('從這開始','從這裡開始吧')
 				+header('下載','戳下去，快')
-				a.ts.labeled.icon.primary.small.button(href="https://github.com/EarlySpringCommitee/ChatUI/releases/latest" target="_blank")
+				a.ts.labeled.icon.primary.small.button(href="https://github.com/gnehs/ChatUI/releases/latest" target="_blank")
 					i.download.icon
 					| 下載
 				+header('引用','下載並解壓縮後，保持資料夾結構，丟到你的網頁目錄，即可開始使用！')
@@ -31,12 +31,12 @@ html
 					:markdown-it
 						```html
 						<!-- Chat UI -->
-						<link href="https://earlyspringcommitee.github.io/ChatUI/css/ChatUI.css" rel="stylesheet">
+						<link href="https://gnehs.github.io/ChatUI/css/ChatUI.css" rel="stylesheet">
 						```
 				+header('範例','連結在下面，自己戳戳')
-				a(href='https://earlyspringcommitee.github.io/ChatUI/test/testMsgr.html') Msgr
+				a(href='https://gnehs.github.io/ChatUI/test/testMsgr.html') Msgr
 				br
-				a(href='https://earlyspringcommitee.github.io/ChatUI/test/testTele.html') Telegram
+				a(href='https://gnehs.github.io/ChatUI/test/testTele.html') Telegram
 				+bigheader('基本元素','')
 				+header('聊天室','輕鬆開聊')
 				p 使用 
@@ -276,7 +276,7 @@ html
 							img(src='https://i.imgur.com/6oTWGHZ.png')
 						.content
 							.author 熊貓貓
-							video(src='https://www.coverr.co/s3/mp4/Down-time.mp4',controls)
+							video(src='/video/bananacat.mp4',autoplay,loop)
 							.text 我喜歡狗狗
 							.meta
 								.item 15:38
@@ -290,7 +290,7 @@ html
 									<div class="author">
 										熊貓貓
 									</div>
-									<video src="https://www.coverr.co/s3/mp4/Down-time.mp4" controls=""></video>
+									<video src="/video/bananacat.mp4" autoplay loop></video>
 									<div class="text">我喜歡狗狗</div>
 									<div class="meta">
 										<div class="item">15:38</div>
@@ -308,7 +308,7 @@ html
 						.avatar
 							img(src='https://i.imgur.com/6oTWGHZ.png')
 						.content
-							video(src='https://www.coverr.co/s3/mp4/Down-time.mp4',controls)
+							video(src='/video/bananacat.mp4',autoplay,loop)
 							.meta
 								.item 15:38
 				+code
@@ -318,7 +318,7 @@ html
 							<div class="message video only">
 								<div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"></div>
 								<div class="content">
-									<video src="https://www.coverr.co/s3/mp4/Down-time.mp4" controls></video>
+									<video src="/video/bananacat.mp4" autoplay loop></video>
 									<div class="meta">
 										<div class="item">15:38</div>
 									</div>
