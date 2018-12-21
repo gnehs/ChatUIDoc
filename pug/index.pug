@@ -34,9 +34,19 @@ html
 						<link href="https://gnehs.github.io/ChatUI/css/ChatUI.css" rel="stylesheet">
 						```
 				+header('範例','連結在下面，自己戳戳')
-				a(href='https://gnehs.github.io/ChatUI/test/testMsgr.html') Msgr
-				br
-				a(href='https://gnehs.github.io/ChatUI/test/testTele.html') Telegram
+				.ts.four.cards
+					a.ts.card(href="https://gnehs.github.io/ChatUI/test/testMsgr.html",target="_blank")
+						.image
+							img(src="./image/DemoMsgr.png")
+						.content
+							.header Messenger
+							.description Messenger 的可愛圓角設計
+					a.ts.card(href="https://gnehs.github.io/ChatUI/test/testTele.html",target="_blank")
+						.image
+							img(src="./image/DemoTelegram.jpg")
+						.content
+							.header Telegram
+							.description Telegram 的經典主題
 				+bigheader('基本元素','')
 				+header('聊天室','輕鬆開聊')
 				p 使用 
