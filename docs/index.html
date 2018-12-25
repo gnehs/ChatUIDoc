@@ -39,7 +39,7 @@
       <div class="column" id="sidebar">
         <nav class="ts borderless secondary relaxed vertical menu inverted">
           <h3 class="ts header">從這開始</h3><a class="item" href="#下載">下載</a><a class="item" href="#引用">引用</a><a class="item" href="#外部引用">外部引用</a><a class="item" href="#範例">範例</a>
-          <h3 class="ts header">基本元素</h3><a class="item" href="#聊天室">聊天室</a><a class="item" href="#樣式">樣式</a><a class="item" href="#訊息">訊息</a><a class="item" href="#右側訊息">右側訊息</a><a class="item" href="#已讀">已讀</a><a class="item" href="#頭貼">頭貼</a><a class="item" href="#圖片訊息">圖片訊息</a><a class="item" href="#單一圖片訊息">單一圖片訊息</a><a class="item" href="#影片訊息">影片訊息</a><a class="item" href="#單一影片訊息">單一影片訊息</a><a class="item" href="#嵌入框架訊息">嵌入框架訊息</a><a class="item" href="#單一嵌入框架訊息">單一嵌入框架訊息</a><a class="item" href="#連結預覽">連結預覽</a><a class="item" href="#分隔線">分隔線</a>
+          <h3 class="ts header">基本元素</h3><a class="item" href="#聊天室">聊天室</a><a class="item" href="#樣式">樣式</a><a class="item" href="#訊息">訊息</a><a class="item" href="#右側訊息">右側訊息</a><a class="item" href="#已讀">已讀</a><a class="item" href="#頭貼">頭貼</a><a class="item" href="#貼圖訊息">貼圖訊息</a><a class="item" href="#圖片訊息">圖片訊息</a><a class="item" href="#單一圖片訊息">單一圖片訊息</a><a class="item" href="#影片訊息">影片訊息</a><a class="item" href="#單一影片訊息">單一影片訊息</a><a class="item" href="#嵌入框架訊息">嵌入框架訊息</a><a class="item" href="#單一嵌入框架訊息">單一嵌入框架訊息</a><a class="item" href="#連結預覽">連結預覽</a><a class="item" href="#分隔線">分隔線</a>
           <h4 class="ts header">進階</h4><a class="item" href="#回覆">回覆</a><a class="item" href="#訊息群組">訊息群組</a>
         </nav><a class="close" href="#close"></a>
       </div>
@@ -284,6 +284,38 @@
 </code></pre>
 
             </div>
+            <h3 class="ts header" id="貼圖訊息"><a class="anchor" href="#貼圖訊息">#</a>貼圖訊息<span class="sub header">徵求長輩圖貼圖(X</span>
+            </h3>
+        <p>使用<code>sticker</code>  來傳送含有貼圖的訊息</p>
+        <div class="cu chat" data-style="telegram">
+          <div class="message sticker">
+            <div class="avatar"><img src="https://i.imgur.com/MTDS9BN.png"></div>
+            <div class="content">
+              <div class="reply">
+                <div class="author">熊貓貓</div>
+                <div class="content">
+                  <div class="text">早安</div>
+                </div>
+              </div><img src="https://i.imgur.com/8Nci7p3.png">
+            </div>
+          </div>
+        </div>
+            <div class="ts secondary code segment">
+              <div class="ts top right attached label">原始碼</div><?prettify lang=html linenums=true?><pre><code class="language-html">&lt;div class=&quot;message sticker&quot;&gt;
+	&lt;div class=&quot;avatar&quot;&gt;&lt;img src=&quot;https://i.imgur.com/MTDS9BN.png&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;content&quot;&gt;
+		&lt;div class=&quot;reply&quot;&gt;
+			&lt;div class=&quot;author&quot;&gt;熊貓貓&lt;/div&gt;
+			&lt;div class=&quot;content&quot;&gt;
+				&lt;div class=&quot;text&quot;&gt;早安&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;img src=&quot;https://i.imgur.com/8Nci7p3.png&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+            </div>
             <h3 class="ts header" id="圖片訊息"><a class="anchor" href="#圖片訊息">#</a>圖片訊息<span class="sub header">你想看我去西班牙拍的照片嗎</span>
             </h3>
         <p>使用 <code>img</code>  class 和<code>&lt;img&gt;</code>  標籤即可在訊息內加入圖片</p>
@@ -332,7 +364,7 @@
         <div class="cu chat" data-style="telegram">
           <div class="message img only">
             <div class="avatar" data-initial="熊"></div>
-            <div class="content"><img src="https://placem.at/things?w=800&amp;txt=ChatUI&amp;random=199">
+            <div class="content"><img src="https://placem.at/things?w=800&amp;txt=ChatUI&amp;random=704">
               <div class="meta">
                 <div class="item">15:30</div>
               </div>

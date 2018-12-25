@@ -20,39 +20,46 @@ var paths = {
 };
 
 
-gulp.task('sass', function() {
+gulp.task('sass', function () {
     return gulp.src(paths.sassWatch)
-        .pipe(plumber({ errorHandler: notify.onError('Error: <%= error..message %>') }))
-        .pipe(sass({ outputStyle: 'expanded' }))
+        .pipe(plumber({
+            errorHandler: notify.onError('Error: <%= error..message %>')
+        }))
+        .pipe(sass({
+            outputStyle: 'expanded'
+        }))
         .pipe(gulp.dest(paths.css))
         .pipe(connect.reload());
 });
 
-gulp.task('js', function() {
+gulp.task('js', function () {
     return gulp.src(paths.jsWatch)
         .pipe(connect.reload());
 });
-gulp.task('pug', function() {
+gulp.task('pug', function (success, error) {
     return gulp.src(paths.pugWatch)
-        .pipe(plumber({ errorHandler: notify.onError('Error: <%= error..message %>') }))
+        .pipe(plumber({
+            errorHandler: notify.onError('Error: <%= error..message %>')
+        }))
         .pipe(pug({
             pretty: true
         }))
+        .on('error', error => console.log(error))
         .pipe(gulp.dest(paths.html))
 });
-gulp.task('html', ['pug'], function() {
+gulp.task('html', ['pug'], function () {
     return gulp.src(paths.htmlWatch)
         .pipe(connect.reload());
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch(paths.pugWatch, ['pug']);
     gulp.watch(paths.sassWatch, ['sass']);
     gulp.watch(paths.jsWatch, ['js']);
     gulp.watch(paths.htmlWatch, ['html']);
 });
 
-gulp.task('server', function() {
+gulp.task('server', function () {
     connect.server({
         root: 'docs',
         port: 8880,
